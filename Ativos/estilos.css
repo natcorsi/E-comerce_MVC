@@ -1,0 +1,659 @@
+/*
+
+Thema: Tema dos Magos
+Description: Este é o tema exclusivo para a loja Toca dos Magos!
+Autor: Nathan Corsi
+Autor URL: http://instagram.com/corsisdesign
+Version: 0.1
+
+*/
+
+
+@import "componentes.css";
+
+
+/*------------------ Variaveis ----------------- */
+:root {
+
+	--cor-primaria: #a74aff;
+	--cor-secundaria: #6a19b6;
+	--cor-1: #15ccb4;
+	--cor-2: #ff8e93;
+	--cor-3: #3b0073;
+	--cor-4: #27004b;
+
+	--cor-primaria: #a74aff;
+	--cor-secundaria: #6a19b6;
+	--cor-1: #15ccb4;
+	--cor-2: #ff8e93;
+	--cor-3: #3b0073;
+	--cor-4: #27004b;
+	--cor-escura-1: #000000b0;
+	--cor-escura-2: #00000024;
+	--cor-clara-1: #ffffff79;
+	--cor-clara-2: #ffffff14;
+	--cor-clara-3: #990cf930;
+
+	--fundo-gradiente-principal: linear-gradient(135deg, rgb(168, 17, 188) 0%, rgb(12, 134, 171) 100%);
+	--fundo-gradiente-secundario: linear-gradient(155deg, rgba(255, 180, 78, 1) 0%, rgba(255, 56, 142, 1) 100%);
+	--fundo-textura-grade: url("../Ativos/img/grade.png");
+	--fundo-textura-ponto: url("../Ativos/img/ponto.png");
+
+}
+
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('fonts/trebuchet-ms.ttf')
+}
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------
+------------------------------ Global --------------------------- 
+-----------------------------------------------------------------
+*/
+
+/* ---------------------------------------- Corpo ---------------------------------------- */
+body {
+	background: var(--fundo-textura-ponto), linear-gradient(178deg, rgb(127 47 255) 0%, rgb(109 18 163) 85%);
+	color: #fff;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+
+/* ---------------------------------------- Titulos Links e Textos ---------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+	padding: 18px 0 37px;
+	text-shadow: #ffffff8f 0px 0px 10px;
+	font-size: 30px;
+}
+
+a {
+	color: var(--distak-color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+h3 a {
+	color: #fff;
+}
+
+a.button {
+	background: var(--background-gradient-secondary) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------
+------------------------------ Efeitos --------------------------
+-----------------------------------------------------------------
+*/
+
+.ondas {
+	background-image: url('<?= BASE_URL ?>Ativos/img/ondas.svg');
+	background-repeat: repeat-x;
+	height: 90px;
+	margin: 33px -34px -120px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------
+---------------------- Estrutura Principal ----------------------
+-----------------------------------------------------------------
+*/
+
+
+/*---------------------------------------- Conteúdo/Containers ---------------------------------------- */
+
+content {
+  padding: 13px;
+  margin: 130px 13px;
+  text-align: center;
+  display: block;	
+}
+
+
+
+/* ---------------------------------------- Header ---------------------------------------- */
+
+/* ------------------ Cabeçalho ------------------ */
+header {
+	padding: 6px 1px;
+	background: var(--fundo-textura-grade), linear-gradient(1307deg, rgb(55 218 255 / 83%) 0%, rgb(163 30 255 / 83%) 54%);
+	margin: -1px -8px;
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	top: 0;
+	backdrop-filter: blur(10px);
+  }
+  
+  .logo { padding: 0px 39px; }
+  .logo img {
+	width: 80px !important;
+	height: auto !important;
+  }
+  
+  .botoes-topo {
+	display: flex;
+	float: right;
+	margin: -40px 54px;
+  }
+
+.icon { padding: 5px; }
+ 
+.carrinho {
+  margin: 0;
+}
+
+.carrinho-total {
+background: var(--cor-primaria);
+padding: 5px 36px 5px 14px;
+border-radius: 30px;
+margin-right: 18px;
+color: #fff; 
+}
+
+.carrinho-itens-cont {
+  background: #fb346b;
+  padding: 1px 5px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 13px;
+  margin: -8px;
+  position: absolute;
+}	
+
+
+
+
+/*------------------ Carrinho ----------------- */
+
+/* ----- Janela do Carrinho ----- */
+
+.carrinho-modal {
+  position: absolute;
+}
+
+
+#carrinho-modal {
+  display: none;
+  right: 0px;
+  top: 61px;
+  background: #9e60d382;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 0;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.carrinho-modal.active { display: block !important; }
+
+.carrinho-total {
+  background: var(--cor-primaria);
+  padding: 5px 36px 5px 14px;
+  border-radius: 30px;
+  margin-right: 18px;
+  color: #fff;
+}
+
+.carrinho-total::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z' stroke='%23fff' stroke-width='1.5'/%3E%3Cpath d='M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z' stroke='%23fff' stroke-width='1.5'/%3E%3Cpath d='M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  display: contents;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 12px;
+  position: absolute;
+  margin: -2px 5px;
+}
+
+
+
+/* ----- Perfil ----- */
+.perfil {
+  padding: 3px;
+  display: inline-block;
+  width: 18px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='9' r='3' stroke='%23fff' stroke-width='1.5'/%3E%3Cpath d='M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- Página Inicio ---------------------------------------- */
+
+
+/* ------------ Slide ------------ */
+.slider {
+	width: 100%;
+	max-width: 1500px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+}
+
+.slides {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+	min-width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+/* Fundos gradientes */
+.slide-1 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+.slide-2 { background: linear-gradient(135deg, #a584cf, #9fc3e0); }
+.slide-3 { background: linear-gradient(135deg, #f7e990, #95f589);  }
+
+
+.cta-btn {
+	background: white;
+	color: #333;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+
+.cta-btn:hover {
+	background: #444;
+	color: white;
+}
+
+/* Botões de navegação */
+.dots {
+	display: flex;
+	justify-content: center;
+	margin-top: -23px;
+	position: absolute;
+	margin: -55px 47%;
+	z-index: 999;
+  }
+
+.dot {
+	width: 12px;
+	height: 12px;
+	margin: 5px;
+	background: var(--cor-clara-1);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.dot.active {
+	background: var(--cor-escura-2);
+}
+
+.slider h2 {
+	margin: -33px;
+}
+
+
+
+
+
+
+/* ------------ Infos ------------ */
+
+.loja-icon {
+	padding: 0px 33px;
+	width: 178px;
+	border-radius: 5px;
+	flex: 50px;
+}
+
+.icons-home {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.icon-titulo {
+	margin: 15px 0px -14px;
+	font-weight: bolder;
+	font-size: 19px;
+}
+
+.icone {
+margin-top: 28px;
+width: 45px;
+}
+
+.caixa {
+	margin: 0px 0px 25px;
+}
+
+
+
+
+/* ------------ Cores de Icones ------------ */
+
+.frete {
+	background: #e22c41;
+}
+.parcele {
+	background: #97d03d;
+}
+.seguro {
+	background: #e48441;
+}
+.monitorado {
+	background: #3f92bf;
+}
+
+
+/* ------------ Produtos ------------ */
+
+.container.produtos {
+	background: #32135e;
+	margin: 119px -34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- Página Painel ---------------------------------------- */
+
+
+/*-------------------- Campos de Dados do Usuario --------------------*/
+#form-usuario {
+  width: 350px;
+  margin: auto;
+}
+
+#form-usuario div {
+  background: #cccccc1a;
+  margin: 7px;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+#form-usuario label {
+  font-weight: bold;
+  color: var(--cor-clara-1);
+}
+
+
+
+/*-------------------- Nome do Usuario --------------------*/
+
+.usuario-nome {
+  font-size: 25px;
+}
+
+.usuario-nome div {
+  font-size: 41px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+
+
+
+.link-sair {
+  background: #fff;
+  color: #333;
+  padding: 2px 11px;
+  border-radius: 50px;
+}
+
+
+
+/* ---------------------------------------- Página Produto ---------------------------------------- */
+
+.produto img {
+	width: 250px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.produto {
+	background: #ffffff1f;
+	width: 250px;
+	border-radius: 15px;
+	padding: 0px 1px 1px 1px;
+	margin: 24px 4px;
+	display: inline-flex;
+	list-style: none;
+}
+
+.mostrarProduto img {
+	width: 450px;
+	border-radius: 15px;
+}
+
+.mostrarProduto {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 63px;
+}
+
+.produto-container {
+	flex: 3px;
+}
+
+.miniatura {
+	width: 100px;
+	height: auto;
+}
+
+
+
+.variante {
+	background: var(--cor-4);
+	padding: 4px 10px;
+	margin: 0px 3px;
+	border-radius: 5px;
+}
+.variante input {
+	display: none;
+}
+
+#opcoesTamanho {
+	margin-top: 19px;
+	margin-bottom: 41px;
+}
+
+fieldset {
+	border-radius: 8px;
+	border: solid 1px #fff;
+	padding: 30px 20px;
+}
+
+/* Quando o botão estiver selecionado */
+.opcoesCor input:checked + label{
+    background: #007BFF !important;
+    color: white;
+}
+
+/* ---------------------------------------- Tabelas ---------------------------------------- */
+
+table {
+	width: 100%;
+	border: none;
+}
+
+th,
+td {
+	border: none;
+	padding: 8px;
+	border-bottom: solid 1px #ffffff12;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------- Campos de Formulários --------------------*/
+input {
+  background: var(--cor-clara-3);
+  padding: 9px 6px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  margin: 6px 4px;
+}
+
+
+button {
+  background: var(--fundo-gradiente-principal);
+  border-radius: 50px;
+  padding: 3px 20px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  margin: 5px;
+}
+
+.comprar {
+	background: var(--fundo-gradiente-secundario);
+	box-shadow: 0px 0px 15px #ff736f;
+	font-weight: bold;
+  }
+
+.conta-form {
+  width: 400px;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 24px 7px;
+  border: solid 2px var(--cor-clara-3);
+}
+
+
+
+
+
+/* ---------------------------------------- Rodape ---------------------------------------- */
+
+.pagamentos {
+	background: #0000001c;
+	margin: 101px -34px -212px;
+	padding: 62px 21px;
+}
+
+rodape {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin: 200px -8px -10px;
+	background: var(--fundo-textura-grade), linear-gradient(1407deg, #6b389a 50%, #0d619c 100%);
+	padding: 15px 5px;
+	bottom: 0;
+}
+
+.footer-content ul li {
+	list-style: none;
+}
+
+
+
+input[type="radio"]:checked + span {
+    border: 2px solid #000; /* Destaque o botão selecionado */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------
+--------------------------- Responsivo ---------------------------
+-----------------------------------------------------------------
+*/
+
+/* ---------------------------------------- Celulares ---------------------------------------- */
+@media (max-width: 767px) {
+
+}
+
+/* ---------------------------------------- Tablets ----------------------------------------  */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* ---------------------------------------- Desktop ---------------------------------------- */
+@media (min-width: 992px) {
+
+	.container {
+	  padding: 35px 174px;
+	}
+
+}

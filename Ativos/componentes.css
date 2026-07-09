@@ -1,0 +1,51 @@
+/*
+
+Estilos dos Componentes
+
+*/
+
+/*------------------ Produtos ----------------- */
+
+.produtos ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    gap: 16px; /* Espaçamento entre os itens */
+    justify-content: center; /* Alinha os itens ao centro */
+    padding: 16px;
+}
+
+.produtos li {
+    flex: 1 1 calc(31%); /* 25% de largura menos o espaçamento */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    text-align: center;
+    list-style: none;
+    background: var(--cor-clara-3);
+    border-radius: 22px;
+}
+
+
+.produtos img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  object-fit: cover;
+}
+
+
+
+/*------------------ Montante/Preços ----------------- */
+
+.montante {
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-size: 21px;
+}
+
+.montante b {
+  color: var(--cor-clara-1);    
+  padding: 4px;
+  font-size: 15px;
+}
+
+
