@@ -7,9 +7,9 @@ Um projeto de **e-commerce desenvolvido em PHP utilizando arquitetura MVC**, cri
 ---
 
 
-```markdown
+
 ![Tela inicial da loja](homepage.png)
-```
+
 
 ---
 
